@@ -5,7 +5,10 @@
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 
-eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/omp/dracula.omp.json)"
+# eval "$(starship init zsh)"
+
+export PATH=$PATH:/home/matt/.cargo/bin
 
 # Use powerline
 # USE_POWERLINE="true"
@@ -29,6 +32,7 @@ fi
 alias sshserver="kitten ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no matt@10.0.0.70"
 alias update="cd ~/Tech/PlaylistPioneer/update_history/ && sudo npm run dev"
 alias cd="z"
+alias spotifyd="spotifyd --config-path ~/.config/spotifyd/spotifyd.conf"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
